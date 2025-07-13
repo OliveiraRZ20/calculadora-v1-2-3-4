@@ -8,6 +8,7 @@ class Utils:
         return None
     
     @staticmethod
+    # Valida se a entrada é um número
     def validar_numero(numero: float) -> bool:
         if not numero:
             return False
@@ -18,6 +19,7 @@ class Utils:
             return False
 
     @staticmethod
+    # Captura um número validado do usuário
     def captar_numero_validado(mensagem: str) -> float:
         while True:
             entrada = input(mensagem)
@@ -26,6 +28,7 @@ class Utils:
             print("- ERRO: Entrada inválida. Por favor, insira um número válido.")
     
     @staticmethod
+    # Valida o operador selecionado pelo usuário
     def validar_operador(operador: int) -> bool:
         if not operador:
             return False
@@ -36,6 +39,7 @@ class Utils:
             return False
     
     @staticmethod
+    # Captura um operador validado do usuário
     def captar_operador_validado(mensagem: str) -> int:
         while True:
             operador = input(mensagem)
@@ -44,6 +48,7 @@ class Utils:
             print("- ERRO: Entrada inválida. Por favor, insira um operador válido (1-4).")
     
     @staticmethod
+    # Verifica se o usuário deseja finalizar a aplicação
     def checar_finalizacao() -> bool:
         resposta = input("Deseja realizar outra operação? (s/n): ").strip().lower()
         match resposta:
